@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/style.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>Đơn Ứng Tuyển</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index">Trang chủ</a>
+    <a href="apply">Apply Form</a>
+    <a href="contact">Contact</a>
+</nav>
+
+<div class="container">
+    <h2>Điền Thông Tin Ứng Tuyển Đi Cục Dàng ><</h2>
+
+    <form action="acceptInformation" method="POST"> <div class="form-group">
+        <label>Họ và Tên:</label>
+        <input type="text" name="username" required placeholder="Nguyễn Văn A">
+    </div>
+
+        <div class="form-group">
+            <label>Ngày sinh:</label>
+            <input type="date" name="birth" required>
+        </div>
+
+        <div class="form-group">
+            <label>Số điện thoại:</label>
+            <input type="text" name="phone" required placeholder="0901234567">
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" required placeholder="abc@example.com">
+        </div>
+
+        <div class="form-group">
+            <label>Địa chỉ:</label>
+            <input type="text" name="address" placeholder="Hà Nội, Việt Nam">
+        </div>
+
+        <div class="form-group">
+            <label>Vị trí ứng tuyển:</label>
+            <select name="field">
+                <option value="Phát triển phần mềm (Software Development)">Phát triển phần mềm (Software Development)</option>
+                <option value="Dữ liệu & Trí tuệ nhân tạo (Data & AI)">Dữ liệu & Trí tuệ nhân tạo (Data & AI)</option>
+                <option value="Hạ tầng & Vận hành (Infrastructure & Operations)">Hạ tầng & Vận hành (Infrastructure & Operations)</option>
+                <option value="Bảo mật (Cyber Security)">Bảo mật (Cyber Security)</option>
+                <option value="Quản lý & Kiểm thử (Management & QA)">Quản lý & Kiểm thử (Management & QA)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Ghi chú thêm:</label>
+            <textarea name="note" rows="4" placeholder="Kinh nghiệm, kỹ năng..."></textarea>
+        </div>
+
+        <button type="submit">Gửi Đơn Ứng Tuyển</button>
+    </form>
+</div>
+
+</body>
+</html>
